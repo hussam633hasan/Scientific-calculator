@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculater</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="div1"><form id="cal">
+    <table id="sim">
+        <tr>
+            <td colspan="4"><input type="text" id="display"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="C" class="top" onclick="cal.display.value= ''"></td>
+            <td colspan="2"><input type="button" value="scientific" class="top new" ></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" class="btn" onclick="cal.display.value+='7'"></td>
+            <td><input type="button" value="8" class="btn" onclick="cal.display.value+='8'"></td>
+            <td><input type="button" value="9" class="btn" onclick="cal.display.value+='9'"></td>
+            <td><input type="button" value="+" class="btn" onclick="cal.display.value+='+'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" class="btn" onclick="cal.display.value+='4'"></td>
+            <td><input type="button" value="5" class="btn" onclick="cal.display.value+='5'"></td>
+            <td><input type="button" value="6" class="btn" onclick="cal.display.value+='6'"></td>
+            <td><input type="button" value="-" class="btn" onclick="cal.display.value+='-'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" class="btn" onclick="cal.display.value+='1'"></td>
+            <td><input type="button" value="2" class="btn" onclick="cal.display.value+='2'"></td>
+            <td><input type="button" value="3" class="btn" onclick="cal.display.value+='3'"></td>
+            <td><input type="button" value="*" class="btn" onclick="cal.display.value+='*'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" class="btn" onclick="cal.display.value+='0'"></td>
+            <td><input type="button" value="." class="btn" onclick="cal.display.value+='.'"></td>
+            <td><input type="button" value="/" class="btn" onclick="cal.display.value+='/'"></td>
+            <td><input type="button" value="=" class="btn" onclick="cal.display.value=eval(cal.display.value)"></td>
+        </tr>
+    </table>
+</form>
+</div>
+<div id="div2">
+    <table id="sci">
+        <tr>
+            <td><input type="button" value="Cos" class="scical" onclick="cos()"></td>
+            <td><input type="button" value="Sin" class="scical" onclick="sin()"></td>
+            <td><input type="button" value="&#177" class="scical" onclick="change()"></td>
+            <td><input type="button" value="Max" class="scical" onclick="max()"></td>
+        </tr>    
+        <tr>        
+            <td><input type="button" value="Tan" class="scical" onclick="tan()"></td>    
+            <td><input type="button" value="&radic;" class="scical" onclick="sqrt()"></td>
+            <td><input type="button" value="x&#50;" class="scical" onclick="square()"></td>
+            <td><input type="button" value="Min" class="scical" onclick="min()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="x&#94;" class="scical" onclick="exp()"></td>
+            <td><input type="button" value="Log" class="scical" onclick="log()"></td>
+            <td><input type="button" value="%" class="scical" onclick="per()"></td>
+            <td><input type="button" value="Asin" class="scical" onclick="asin()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="&#960;" class="scical"></td>
+            <td><input type="button" value="Ran" class="scical" onclick="ran()"></td>
+            <td><input type="button" value="Pow" class="scical" onclick="pow()"></td>
+            <td><input type="button" value="Abs" class="scical" onclick="abs()"></td>
+        </tr>
+    </table>
+</div>
+
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+        $(document).ready(function(){
+        $(".new").click(function(){
+        $("#div2").fadeToggle();
+    });
+
+});
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
